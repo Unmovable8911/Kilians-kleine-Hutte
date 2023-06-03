@@ -1,0 +1,67 @@
+{% load static %}
+<!doctype html>
+<html>
+  <head>
+    <title>Kilians kleine Hütte</title>
+    <link rel="stylesheet" href="{% static 'base.css' %}">
+  </head>
+  <body>
+    <header>
+      <nav id="head-nav">
+        <ul>
+          <li>
+            <img src="{% static 'logo.png' %}" alt="Site logo">
+          </li>
+          <li>
+            <img src="{% static 'blogs.png' %}" alt="Blogs icon">
+            <span class="nav-item">Blogs</span>
+          </li>
+          <li>
+            <img src="{% static 'music.png' %}" alt="Music icon">
+            <span class="nav-item">Music</span>
+          </li>
+          <li>
+            <img src="{% static 'movies.png' %}" alt="Movies icon">
+            <span class="nav-item">Movies</span>
+          </li>
+          <li>
+            <img src="{% static 'tvs.png' %}" alt="TVs icon">
+            <span class="nav-item">TVs</span>
+          </li>
+          <li>
+            <img src="{% static 'books.png' %}" alt="Books icon">
+            <span class="nav-item">Books</span>
+          </li>
+          <li>
+            <img src="{% static 'apps.png' %}" alt="Apps icon">
+            <span class="nav-item">Apps</span>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    {% block content %}{% endblock content %}
+    <footer>
+      <table id="foot-nav">
+        <tr>
+          <th>Entertainment</th>
+          <th>Utilities</th>
+          <th>Study</th>
+          <th>Coding</th>
+        </tr>
+        <tr>
+          <td>
+            <a href="https://www.btnull.to/" target="_blank">BTNull - 无名小站</a>
+          </td>
+          <td>
+            <a href="https://axutongxue.net/" target="_blank">阿虚同学</a>
+          </td>
+          <td>
+            <a href="https://ieltsliz.com/" target="_blank">IELTS Liz</a>
+          </td>
+          <td>
+            <a href="https://www.color-hex.com/" target="_blank">color-hex</a>
+          </td>
+      </table>
+    </footer>
+  </body>
+</html>

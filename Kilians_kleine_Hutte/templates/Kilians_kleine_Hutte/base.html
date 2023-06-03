@@ -1,0 +1,47 @@
+{% load static %}
+<!doctype html>
+<html>
+  <head>
+    <title>Kilians kleine Hütte</title>
+    <link rel="stylesheet" href="{% static 'base.css' %}">
+  </head>
+  <body>
+    <header>
+      <nav id="heading-navigation">
+        <ul>
+          <li>
+            <img src="{% static 'logo.png' %}" alt="Site logo">
+          </li>
+          <li>
+            <img src="{% static 'blogs.png' %}" alt="Blogs icon">
+            <span class="nav-item">Blogs</span>
+          </li>
+          <li>
+            <img src="{% static 'music.png' %}" alt="Music icon">
+            <span class="nav-item">Music</span>
+          </li>
+          <li>
+            <img src="{% static 'movies.png' %}" alt="Movies icon">
+            <span class="nav-item">Movies</span>
+          </li>
+          <li>
+            <img src="{% static 'tvs.png' %}" alt="TVs icon">
+            <span class="nav-item">TVs</span>
+          </li>
+          <li>
+            <img src="{% static 'books.png' %}" alt="Books icon">
+            <span class="nav-item">Books</span>
+          </li>
+          <li>
+            <img src="{% static 'apps.png' %}" alt="Apps icon">
+            <span class="nav-item">Apps</span>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    {% block content %}{% endblock content %}
+    <footer>
+
+    </footer>
+  </body>
+</html>
