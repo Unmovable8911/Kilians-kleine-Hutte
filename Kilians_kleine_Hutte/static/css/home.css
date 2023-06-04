@@ -1,0 +1,25 @@
+#content {
+    margin: 2em;
+    display: table;
+}
+ 
+/* Introduction */
+#intro {
+    display: table-row;
+}
+#intro-para {
+    font-size: 1.3em;
+    margin: 3em 0em;
+    padding: 1em 1.3em;
+    border-right: solid #000 2px;
+    display: table-cell;
+    vertical-align: middle;
+    text-indent: 2em;
+}
+#intro-para p {margin: 0.2em 0em;
+#intro img {
+    float: right;
+    display: table-cell;
+}
+
+/* Recent Uploads */

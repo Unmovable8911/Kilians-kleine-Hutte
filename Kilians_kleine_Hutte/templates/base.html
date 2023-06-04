@@ -1,40 +1,55 @@
 {% load static %}
-<!doctype html>
+<!DOCTYPE html>
 <html>
   <head>
-    <title>Kilians kleine Hütte</title>
-    <link rel="stylesheet" href="{% static 'base.css' %}">
+    <link rel="icon" type="image/png" href="{% static 'images/favicon.png' %}">
+    <title>Kilians kleine Hütte
+        {% block title-expand %}{% endblock title-expand %}</title>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}" />
+    {% block cssrc %}{% endblock cssrc %}
   </head>
   <body>
     <header>
       <nav id="head-nav">
+        <a href="{% url 'home' %}">
+          <img src="{% static 'images/logo.png' %}" alt="Site logo" />
+        </a>
         <ul>
           <li>
-            <img src="{% static 'logo.png' %}" alt="Site logo">
+            <a href="" class="nav-item">
+              <img src="{% static 'images/blogs.png' %}" alt="Blogs icon" />
+              <span>Blogs</span>
+            </a>
           </li>
           <li>
-            <img src="{% static 'blogs.png' %}" alt="Blogs icon">
-            <span class="nav-item">Blogs</span>
+            <a href="" class="nav-item">
+              <img src="{% static 'images/music.png' %}" alt="Music icon" />
+              <span>Music</span>
+            </a>
           </li>
           <li>
-            <img src="{% static 'music.png' %}" alt="Music icon">
-            <span class="nav-item">Music</span>
+            <a href="" class="nav-item">
+              <img src="{% static 'images/movies.png' %}" alt="Movies icon" />
+              <span>Movies</span>
+            </a>
           </li>
           <li>
-            <img src="{% static 'movies.png' %}" alt="Movies icon">
-            <span class="nav-item">Movies</span>
+            <a href="" class="nav-item">
+              <img src="{% static 'images/tvs.png' %}" alt="TVs icon" />
+              <span>TVs</span>
+            </a>
           </li>
           <li>
-            <img src="{% static 'tvs.png' %}" alt="TVs icon">
-            <span class="nav-item">TVs</span>
+            <a href="" class="nav-item">
+              <img src="{% static 'images/books.png' %}" alt="Books icon" />
+              <span>Books</span>
+            </a>
           </li>
           <li>
-            <img src="{% static 'books.png' %}" alt="Books icon">
-            <span class="nav-item">Books</span>
-          </li>
-          <li>
-            <img src="{% static 'apps.png' %}" alt="Apps icon">
-            <span class="nav-item">Apps</span>
+            <a href="" class="nav-item">
+              <img src="{% static 'images/apps.png' %}" alt="Apps icon" />
+              <span>Apps</span>
+            </a>
           </li>
         </ul>
       </nav>
@@ -42,9 +57,10 @@
     {% block content %}{% endblock content %}
     <footer>
       <table id="foot-nav">
+        <caption>Navigation</caption>
         <tr>
           <th>Entertainment</th>
-          <th>Utilities</th>
+          <th>Tools</th>
           <th>Study</th>
           <th>Coding</th>
         </tr>
@@ -61,7 +77,38 @@
           <td>
             <a href="https://www.color-hex.com/" target="_blank">color-hex</a>
           </td>
+        </tr>
+        <tr>
+          <td>
+            <a href="https://spotify-downloader.com/" target="_blank">Spotify Downloader</a>
+          </td>
+          <td>
+            <a href="https://convertio.co/" target="_blank">Convertio</a>
+          </td>
+          <td>
+            <a href="https://www.bbc.co.uk/learningenglish" target="_blank">BBC Learning English</a>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <a href="https://subscene.com/" target="_blank">Subscene</a>
+          </td>
+          <td>
+            <a href="https://whatismyipaddress.com/" target="_blank">What is my IP Address</a>
+          </td>
+          <td>
+            <a href="http://www.ucdrs.superlib.net/" target="_blank">全国图书馆参考咨询联盟</a>
+          </td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>
+            <a href="https://poe.com/" target="_blank">Poe</a>
+          </td>
+        </tr>
       </table>
+      <hr>
+      <p id="copyright">&copy;2023 Kilians kleine Hütte</p>
     </footer>
   </body>
 </html>
