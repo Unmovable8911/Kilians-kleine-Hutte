@@ -1,0 +1,65 @@
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-content: stretch;
+    justify-items: center;
+    grid-column-gap: 20px;
+    grid-row-gap: 25px;
+}
+
+/* Introduction */
+#introduction {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+#intro {
+    width: 600px;
+    align-self: center;
+}
+h1 {
+    font-size: 2em;
+}
+#intro p {
+    font-size: 1.2em;
+    text-indent: 2em;
+}
+
+/* Recent posts */
+.card {
+    border: solid #afafaf 2px;
+    border-radius: 10px;
+    padding: 0;
+}
+.card a:link, .card a:visited {
+    text-decoration: none;
+    color: #000;
+}
+.card a:hover, .card a:active {
+    color: #045117
+}
+.post-cover {
+    width: 414px;
+    height: 200px;
+}
+.post-title {
+    font-size: 1.5em;
+    font-weight: bold;
+    line-height: 0.5em;
+    margin: 0;
+    padding: 6px 10px;
+}
+.post-abstract {
+    font-size: 1em;
+    line-height: 1em;
+    margin: 0;
+    padding: 6px 10px;
+}
+.post-date {
+    font-size: 0.7em;
+    text-align: right;
+    color: #646464;
+    margin: 3px;
+    border-top: solid 2px #b0b0b0;
+}
