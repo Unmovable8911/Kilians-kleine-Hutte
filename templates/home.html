@@ -1,45 +1,45 @@
-{% extends "base.html" %}
-{% load static %}
-{% block title-expand %}
-: To share my ideas and interests - Home
-{% endblock title-expand %}
-{% block cssrc %}
-<link rel="stylesheet" href="{% static 'css/home.css' %}">
-{% endblock cssrc %}
-
-{% block content %}
+{% extends "base.html" %} {% load static %} {% block title-expand %} : To share
+my ideas and interests - Home {% endblock title-expand %} {% block cssrc %}
+<link rel="stylesheet" href="{% static 'css/home.css' %}" />
+{% endblock cssrc %} {% block content %}
 <section id="content">
-  <div id="intoduction">
+  <div id="introduction">
     <div id="intro">
       <h1>To Share my Idears and Interests</h1>
-      <p>Welcome to my humble website! I’m Kilian, the author and curator of
-      this site. You might be wondering what “Kilians kleine Hütte” means.
-      It’s German for “Kilian’s little cabin”. I chose this name because
-      this site is like a cozy and secluded cabin in the woods, where I keep
-      all my treasures: my ideas, my passions, my favorites.</p>
-      <p>On this site, you will find various things that I love and want to
-      share with you, such as music, movies, books, and more. I hope you
-      will enjoy exploring my little cabin and discovering what makes me
-      happy.  Thank you for visiting!</p>
+      <p>
+        Welcome to my humble website! I’m Kilian, the author and curator of this
+        site. You might be wondering what “Kilians kleine Hütte” means. It’s
+        German for “Kilian’s little cabin”. I chose this name because this site
+        is like a cozy and secluded cabin in the woods, where I keep all my
+        treasures: my ideas, my passions, my favorites.
+      </p>
+      <p>
+        On this site, you will find various things that I love and want to share
+        with you, such as music, movies, books, and more. I hope you will enjoy
+        exploring my little cabin and discovering what makes me happy. Thank you
+        for visiting!
+      </p>
     </div>
-    <div class="table-cell">
-      <img src="{% static 'images/intro-pic.png' %}" alt="Home Cover">
+    <div>
+      <img src="{% static 'images/intro-pic.png' %}" alt="Home Cover" />
     </div>
   </div>
 
   <!-- Recent Posts Section !-->
-  <h2>Recent Blog Posts</h2>
-  <div class="grid">
-    {% for post in recent_posts %}
-    <div class="card">
-      <a href="">
-        <img class="post-cover" src="{{ post.cover.url }}"><br>
-        <h4 class="post-title">{{ post.title }}</h4>
-      </a>
-      <p class="post-abstract">{{ post.abstract }}</p>
-      <p class="post-date">{{ post.date }}</p>
+  <div class="exhibit-section">
+    <h2>Recent Blog Posts</h2>
+    <div class="grid">
+      {% for post in recent_posts %}
+      <div class="card">
+        <a href="">
+          <img class="post-cover" src="{{ post.cover.url }}" /><br />
+          <h4 class="post-title">{{ post.title }}</h4>
+        </a>
+        <p class="post-abstract">{{ post.abstract }}</p>
+        <p class="post-date">{{ post.date }}</p>
+      </div>
+      {% endfor %}
     </div>
-    {% endfor %}
   </div>
 </section>
 {% endblock content %}

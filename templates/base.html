@@ -2,62 +2,73 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="icon" type="image/png" href="{% static 'images/favicon.png' %}">
-    <title>Kilians kleine Hütte
-        {% block title-expand %}{% endblock title-expand %}</title>
-    <link rel="stylesheet" href="{% static 'css/base.css' %}" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="{% static 'images/favicon.png' %}"
+    />
+    <title>
+      Kilians kleine Hütte {% block title-expand %}{% endblock title-expand %}
+    </title>
+    <link
+      media="screen and (min-device-width: 1280px)"
+      rel="stylesheet"
+      href="{% static 'css/base.css' %}"
+    />
     {% block cssrc %}{% endblock cssrc %}
   </head>
   <body>
     <header>
-      <nav id="head-nav">
+      <div id="title-flex">
         <a href="{% url 'home' %}">
           <img src="{% static 'images/logo.png' %}" alt="Site logo" />
         </a>
-        <ul>
-          <li>
-            <a href="" class="nav-item">
-              <img src="{% static 'images/blogs.png' %}" alt="Blogs icon" />
-              <span>Blogs</span>
-            </a>
-          </li>
-          <li>
-            <a href="" class="nav-item">
-              <img src="{% static 'images/music.png' %}" alt="Music icon" />
-              <span>Music</span>
-            </a>
-          </li>
-          <li>
-            <a href="" class="nav-item">
-              <img src="{% static 'images/movies.png' %}" alt="Movies icon" />
-              <span>Movies</span>
-            </a>
-          </li>
-          <li>
-            <a href="" class="nav-item">
-              <img src="{% static 'images/tvs.png' %}" alt="TVs icon" />
-              <span>TVs</span>
-            </a>
-          </li>
-          <li>
-            <a href="" class="nav-item">
-              <img src="{% static 'images/books.png' %}" alt="Books icon" />
-              <span>Books</span>
-            </a>
-          </li>
-          <li>
-            <a href="" class="nav-item">
-              <img src="{% static 'images/apps.png' %}" alt="Apps icon" />
-              <span>Apps</span>
-            </a>
-          </li>
-        </ul>
+        <p id="title-quote">
+          Eine bescheidene Hütte im Wald<br />
+          birgt mehr Reichtum als ein Königspalast<br />
+          aber nur Eichhörnchen kennen das Geheimnis<br />
+        </p>
+      </div>
+      <nav id="head-nav">
+        <a href="" class="nav-item">
+          <img src="{% static 'images/blogs.png' %}" alt="Blogs icon" />
+          <span>Blogs</span>
+        </a>
+        <a href="" class="nav-item">
+          <img src="{% static 'images/music.png' %}" alt="Music icon" />
+          <span>Music</span>
+        </a>
+        <a href="" class="nav-item">
+          <img src="{% static 'images/movies.png' %}" alt="Movies icon" />
+          <span>Movies</span>
+        </a>
+        <a href="" class="nav-item">
+          <img src="{% static 'images/tvs.png' %}" alt="TVs icon" />
+          <span>TVs</span>
+        </a>
+        <a href="" class="nav-item">
+          <img src="{% static 'images/books.png' %}" alt="Books icon" />
+          <span>Books</span>
+        </a>
+        <a href="" class="nav-item">
+          <img src="{% static 'images/apps.png' %}" alt="Apps icon" />
+          <span>Apps</span>
+        </a>
+        <span id="pointless-space"></span>
+        <a href="" class="nav-item" title="Search">
+          <img src="{% static 'images/search.png' %}" alt="Search icon">
+        </a>
+        {% if user.is_authenticated %}
+        {% else %}
+        {% endif %}
       </nav>
     </header>
     {% block content %}{% endblock content %}
     <footer>
       <table id="foot-nav">
-        <caption>Navigation</caption>
+        <caption>
+          Navigation
+        </caption>
         <tr>
           <th>Entertainment</th>
           <th>Tools</th>
@@ -66,7 +77,9 @@
         </tr>
         <tr>
           <td>
-            <a href="https://www.btnull.to/" target="_blank">BTNull - 无名小站</a>
+            <a href="https://www.btnull.to/" target="_blank"
+              >BTNull - 无名小站</a
+            >
           </td>
           <td>
             <a href="https://axutongxue.net/" target="_blank">阿虚同学</a>
@@ -80,13 +93,17 @@
         </tr>
         <tr>
           <td>
-            <a href="https://spotify-downloader.com/" target="_blank">Spotify Downloader</a>
+            <a href="https://spotify-downloader.com/" target="_blank"
+              >Spotify Downloader</a
+            >
           </td>
           <td>
             <a href="https://convertio.co/" target="_blank">Convertio</a>
           </td>
           <td>
-            <a href="https://www.bbc.co.uk/learningenglish" target="_blank">BBC Learning English</a>
+            <a href="https://www.bbc.co.uk/learningenglish" target="_blank"
+              >BBC Learning English</a
+            >
           </td>
         </tr>
         <tr>
@@ -94,10 +111,14 @@
             <a href="https://subscene.com/" target="_blank">Subscene</a>
           </td>
           <td>
-            <a href="https://whatismyipaddress.com/" target="_blank">What is my IP Address</a>
+            <a href="https://whatismyipaddress.com/" target="_blank"
+              >What is my IP Address</a
+            >
           </td>
           <td>
-            <a href="http://www.ucdrs.superlib.net/" target="_blank">全国图书馆参考咨询联盟</a>
+            <a href="http://www.ucdrs.superlib.net/" target="_blank"
+              >全国图书馆参考咨询联盟</a
+            >
           </td>
         </tr>
         <tr>
@@ -107,7 +128,7 @@
           </td>
         </tr>
       </table>
-      <hr>
+      <hr />
       <p id="copyright">&copy;2023 Kilians kleine Hütte</p>
     </footer>
   </body>

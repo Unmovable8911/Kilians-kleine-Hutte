@@ -7,6 +7,9 @@
     grid-column-gap: 20px;
     grid-row-gap: 25px;
 }
+.exhibit-section {
+    margin: 2em auto;
+}
 
 /* Introduction */
 #introduction {
@@ -19,7 +22,8 @@
     align-self: center;
 }
 h1 {
-    font-size: 2em;
+    font-size: 2.7em;
+    text-align: center;
 }
 #intro p {
     font-size: 1.2em;
@@ -27,6 +31,10 @@ h1 {
 }
 
 /* Recent posts */
+h2 {
+    color: #818181;
+    font-size: 1.5em;
+}
 .card {
     border: solid #afafaf 2px;
     border-radius: 10px;
@@ -37,7 +45,7 @@ h1 {
     color: #000;
 }
 .card a:hover, .card a:active {
-    color: #045117
+    color: #9b7d05
 }
 .post-cover {
     width: 414px;
@@ -53,13 +61,15 @@ h1 {
 .post-abstract {
     font-size: 1em;
     line-height: 1em;
+    color: #4d4d4d;
     margin: 0;
     padding: 6px 10px;
 }
 .post-date {
     font-size: 0.7em;
     text-align: right;
-    color: #646464;
+    color: #303030;
     margin: 3px;
+    padding: 2px;
     border-top: solid 2px #b0b0b0;
 }

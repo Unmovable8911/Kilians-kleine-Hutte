@@ -1,66 +1,99 @@
+@font-face {
+  font-family: "comforter";
+  src: url(static/fonts/comforter.ttf);
+}
+@font-face {
+  font-family: "homemadeApple";
+  src: url(static/fonts/homemadeApple.ttf);
+}
 body {
   width: 1400px;
   margin: auto;
   font-size: medium;
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 /* Header */
-#head-nav ul {
-  padding: 0;
+#title-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-#head-nav li {
-  display: inline;
+#title-quote {
+  text-align: right;
+  line-height: 1.5em;
+  font-size: 1.2em;
+  font-family: "comforter", "homemadeApple", cursive;
 }
-.nav-item:link, .nav-item:visited {
-    color: inherit;
+
+nav#head-nav {
+  display: flex;
+  position: sticky;
+  top: 0px;
+}
+.nav-item {
+  margin: 3px;
+}
+.nav-item:link,
+.nav-item:visited {
+  color: inherit;
   font-size: 1.7em;
   text-decoration: none;
 }
-.nav-item:hover, .nav-item:active {
-    border-bottom: #636363 solid 2px;
+.nav-item:hover,
+.nav-item:active {
+  border-bottom: #636363 solid 2px;
 }
 .nav-item span {
   position: relative;
   bottom: 9px;
 }
+span#pointless-space {
+  flex-grow: 1;
+}
 
 /* Content */
 #content {
-    width: 1300px;
-    margin: auto;
+  width: 1300px;
+  margin: 3em auto;
 }
 
 /* Footer */
-#foot-nav{
-    caption-side: top;
-    font-size: 1.3em;
+#foot-nav {
+  caption-side: top;
+  font-size: 1.3em;
 }
 #foot-nav caption {
-    text-align: left;
-    font-size: 1.2em;
-    font-weight: bold;
+  text-align: left;
+  font-size: 1.2em;
+  font-weight: bold;
 }
-#foot-nav td, #foot-nav th {
-    padding: 0px 20px;
+#foot-nav td,
+#foot-nav th {
+  padding: 0px 20px;
 }
-#foot-nav td:nth-child(1), #foot-nav th:nth-child(1) {
-    padding: 0px 20px 0px 0px
+#foot-nav td:nth-child(1),
+#foot-nav th:nth-child(1) {
+  padding: 0px 20px 0px 0px;
 }
-#foot-nav td, #foot-nav th {
-    padding-left: 5px;
+#foot-nav td,
+#foot-nav th {
+  padding-left: 5px;
 }
 #foot-nav th {
-    text-align: left;
+  text-align: left;
 }
-#foot-nav a:link, #foot-nav a:visited {
-    font-size: 1em;
-    color: inherit;
-    text-decoration: none;
+#foot-nav a:link,
+#foot-nav a:visited {
+  font-size: 1em;
+  color: inherit;
+  text-decoration: none;
 }
-#foot-nav a:hover, #foot-nav a:focus, #food-nav a:active {
-    color: #757e01;
+#foot-nav a:hover,
+#foot-nav a:focus,
+#food-nav a:active {
+  color: #757e01;
 }
 #copyright {
-    text-align: center;
+  text-align: center;
 }
